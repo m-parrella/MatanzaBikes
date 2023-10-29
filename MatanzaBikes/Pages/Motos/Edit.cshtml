@@ -1,0 +1,95 @@
+﻿@page
+@model MatanzaBikes.Pages.Motos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Moto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Moto.Id" />
+            <div class="form-group">
+                <label asp-for="Moto.MarcaId" class="control-label"></label>
+                <select asp-for="Moto.MarcaId" class="form-control" asp-items="ViewBag.MarcaId"></select>
+                <span asp-validation-for="Moto.MarcaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Modelo" class="control-label"></label>
+                <input asp-for="Moto.Modelo" class="form-control" />
+                <span asp-validation-for="Moto.Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Cilindrada" class="control-label"></label>
+                <input asp-for="Moto.Cilindrada" class="form-control" />
+                <span asp-validation-for="Moto.Cilindrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Color" class="control-label"></label>
+                <input asp-for="Moto.Color" class="form-control" />
+                <span asp-validation-for="Moto.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Año" class="control-label"></label>
+                <input asp-for="Moto.Año" class="form-control" />
+                <span asp-validation-for="Moto.Año" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Motor" class="control-label"></label>
+                <input asp-for="Moto.Motor" class="form-control" />
+                <span asp-validation-for="Moto.Motor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Bateria" class="control-label"></label>
+                <input asp-for="Moto.Bateria" class="form-control" />
+                <span asp-validation-for="Moto.Bateria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Peso" class="control-label"></label>
+                <input asp-for="Moto.Peso" class="form-control" />
+                <span asp-validation-for="Moto.Peso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Rodado" class="control-label"></label>
+                <input asp-for="Moto.Rodado" class="form-control" />
+                <span asp-validation-for="Moto.Rodado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Suspension" class="control-label"></label>
+                <input asp-for="Moto.Suspension" class="form-control" />
+                <span asp-validation-for="Moto.Suspension" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Frenos" class="control-label"></label>
+                <input asp-for="Moto.Frenos" class="form-control" />
+                <span asp-validation-for="Moto.Frenos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.ImagenUrl" class="control-label"></label>
+                <input asp-for="Moto.ImagenUrl" class="form-control" />
+                <span asp-validation-for="Moto.ImagenUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moto.Precio" class="control-label"></label>
+                <input asp-for="Moto.Precio" class="form-control" />
+                <span asp-validation-for="Moto.Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
