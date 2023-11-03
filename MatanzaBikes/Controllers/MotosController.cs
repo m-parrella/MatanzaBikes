@@ -23,20 +23,49 @@ namespace MatanzaBikes.Controllers
         }
 
         // GET: api/Motos
-        [SwaggerOperation(
-            Summary = "Obtiene un listado con todas las Motos."
-        )]
+        /// <summary>Obtiene un listado con todas las Motos.</summary>
+        /// <param name="column" example="nombre"></param>
+        /// <param name="keyword" example="Honda"></param>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IEnumerable<Moto>>> GetMotos()
+        public async Task<ActionResult<IEnumerable<Moto>>> GetMotos(string? column = null, string? keyword = null)
         {
+
+            var motos = new List<Moto>();
+
             if (_context.Motos == null)
             {
                 return NotFound();
             }
-            return await _context.Motos.ToListAsync();
+
+            if (!string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(keyword))
+            {
+                var filter = $"%{keyword}%";
+                switch (column)
+                {
+                    case "modelo":
+                        motos = _context.Motos.Where(m => EF.Functions.Like(m.Modelo, filter)).ToList();
+                        break;
+                    case "año":
+                        if (int.TryParse(keyword, out var año))
+                        {
+                            motos = _context.Motos.Where(m => m.Año == año).ToList();
+                        }
+                        break;
+                    default:
+                        return BadRequest(new { message = "Invalid column name" });
+                }
+            }
+            else
+            {
+                motos = _context.Motos.ToList();
+            }
+
+            return Ok(motos);
+
+            //return await _context.Motos.ToListAsync();
         }
 
         // GET: api/Motos/5

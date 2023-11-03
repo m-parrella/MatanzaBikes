@@ -31,7 +31,7 @@ namespace MatanzaBikes.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IEnumerable<Marca>>> GetMarcas(string column = "", string keyword = "")
+        public async Task<ActionResult<IEnumerable<Marca>>> GetMarcas(string? column = null, string? keyword = null)
         {
             var marcas = new List<Marca>();
             
@@ -39,7 +39,7 @@ namespace MatanzaBikes.Controllers
             {
                 return NotFound();
             }
-            
+
             if (!string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(keyword))
             {
                 var filter = $"%{keyword}%";
@@ -55,11 +55,15 @@ namespace MatanzaBikes.Controllers
                         }
                         break;
                     default:
-                        return BadRequest("Invalid column name");
+                        return BadRequest(new {message = "Invalid column name"});
                 }
             }
+            else
+            {
+                marcas = _context.Marcas.ToList();
+            }
                 
-            return marcas;
+            return Ok(marcas);
         }
 
         // GET: api/Marcas/5
