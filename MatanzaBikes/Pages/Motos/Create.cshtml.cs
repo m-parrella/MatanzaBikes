@@ -21,12 +21,15 @@ namespace MatanzaBikes.Pages.Motos
 
         public IActionResult OnGet()
         {
+            ViewData["MarcaId"] = new SelectList(_context.Marcas, "Id", "Nombre");
             return Page();
         }
 
         [BindProperty]
         public Moto Moto { get; set; } = default!;
-        
+
+
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

@@ -1,7 +1,7 @@
 ﻿using MatanzaBikes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-//using MatanzaBikes.Controllers;
+using MatanzaBikes.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -4,7 +4,60 @@
     ViewData["Title"] = "Home page";
 }
 
+<style>
+    p,h4,ul {
+        text-align: left;
+    }
+    h4 {
+        font-weight: bold;
+    }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Grupo 5 | 2023</h1>
+
+    <h4>Descripción General</h4>
+
+    <p>
+        Elegir un dominio de aplicación a fin de realizar una sistema cuya funcionalidad será la
+        administración de una entidad importante de ese dominio. Es decir, básicamente se deberá
+        realizar el ABM (alta, baja, modificación) de esa entidad.
+    </p>
+
+    <h4>Requerimientos funcionales</h4>
+
+    <ul>
+        <li>Dar de alta elementos de esa entidad.</li>
+        <li>Actualizar elementos - campos de esa entidad.</li>
+        <li>Eliminar elementos de esa entidad.</li>
+        <li>Listar o presentar por pantalla todos los elementos de esa entidad, con un buscador que tenga al menos dos campos por los cuales se permita buscar.</li>
+    </ul>
+
+    <h4>Requisitos de diseño - Consideraciones técnicas</h4>
+
+    <ul>
+        <li>La entidad principal debe tener al menos 10 campos.</li>
+        <li>Al menos un campo debe ser tipo lista - selección (combo).</li>
+        <li>Al menos un campo debe ser tipo numérico, con un rango de 1 a 1000 (Validar rango).</li>
+        <li>Usar validación de campos segun se requiera.</li>
+        <li>La aplicación debe tener cobertura de tests unitarios.</li>
+        <li>Preferentemente, la arquitectura debe hacer uso de algun patrón de diseño que se verá en clase.</li>
+    </ul>
+
+    <h4>
+        Requerimiento funcional adicional Deseable
+    </h4>
+
+    <p>
+        Agregar una entidad de relación a la entidad principal, y desarrollar el alta de esa nueva entidad de relación junto con la asociación a la entidad principal.
+        (ej. Si la entidad principal fuese la entidad "Provincia", una posible entidad de relación sería "Localidades", de esta forma se solicita el desarrollo del alta de localidad y la asociación a su Provincia correspondiente.
+    </p>
+
+        <h4>Documentación</h4>
+
+    <ul>
+        <li>Readme con descripcion y diagramas</li>
+        <li>Coleccion Postman con casos de uso.</li>
+        <li>Documentacion con Swagger/OpenAPI en caso de API.</li>
+    </ul>
+
 </div>

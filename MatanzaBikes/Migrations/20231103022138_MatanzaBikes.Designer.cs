@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MatanzaBikes.Migrations
 {
     [DbContext(typeof(MatanzaBikesContext))]
-    [Migration("20231029042624_MatanzaBikes")]
+    [Migration("20231103022138_MatanzaBikes")]
     partial class MatanzaBikes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,6 +122,25 @@ namespace MatanzaBikes.Migrations
                     b.HasIndex("MarcaId");
 
                     b.ToTable("Motos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Año = 2023,
+                            Bateria = "12",
+                            Cilindrada = "650",
+                            Color = "Verde",
+                            Frenos = "Disco",
+                            ImagenUrl = "",
+                            MarcaId = 1,
+                            Modelo = "KLT 650",
+                            Motor = "4 tiempos",
+                            Peso = 160,
+                            Precio = 11067000.0,
+                            Rodado = 118.0,
+                            Suspension = "Hidraulica"
+                        });
                 });
 
             modelBuilder.Entity("MatanzaBikes.Model.Moto", b =>

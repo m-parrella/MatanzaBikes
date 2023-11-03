@@ -19,7 +19,9 @@ namespace MatanzaBikes.Pages.Motos
             _context = context;
         }
 
-      public Moto Moto { get; set; } = default!; 
+      public Moto Moto { get; set; } = default!;
+
+        public IList<Marca> Marca { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -37,6 +39,12 @@ namespace MatanzaBikes.Pages.Motos
             {
                 Moto = moto;
             }
+
+            if (_context.Marcas != null)
+            {
+                Marca = await _context.Marcas.ToListAsync();
+            }
+
             return Page();
         }
     }

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using MatanzaBikes.Model;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
+using System.Drawing;
 
 namespace MatanzaBikes.Data
 {
@@ -46,6 +47,23 @@ namespace MatanzaBikes.Data
                  new Marca() { Id = marcas.IndexOf(marca) + 1, Nombre = marca }
                  );
             }
+
+            modelBuilder.Entity<Moto>().HasData(new Moto() {
+                Id = 1,
+                MarcaId = 1,
+                Modelo = "KLT 650",
+                Cilindrada = "650",
+                Color = "Verde",
+                Año = 2023,
+                Motor = "4 tiempos",
+                Bateria = "12",
+                Peso = 160,
+                Rodado = 118,
+                Suspension = "Hidraulica",
+                Frenos = "Disco",
+                ImagenUrl = "",
+                Precio = 11067000
+            });
 
         }
 

@@ -36,6 +36,7 @@ namespace MatanzaBikes.Pages.Motos
                 return NotFound();
             }
             Moto = moto;
+            ViewData["MarcaId"] = new SelectList(_context.Marcas, "Id", "Nombre");
             return Page();
         }
 

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MatanzaBikes.Data;
 using MatanzaBikes.Model;
 using Swashbuckle.AspNetCore.Annotations;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace MatanzaBikes.Controllers
 {
@@ -23,17 +24,42 @@ namespace MatanzaBikes.Controllers
         }
 
         // GET: api/Marcas
-        [SwaggerOperation(
-            Summary = "Obtiene un listado con todas las Marcas."
-        )]
+        /// <summary>Obtiene un listado con todas las Marcas.</summary>
+        /// <param name="column" example="nombre"></param>
+        /// <param name="keyword" example="Honda"></param>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Marca>>> GetMarcas()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<Marca>>> GetMarcas(string column = "", string keyword = "")
         {
+            var marcas = new List<Marca>();
+            
             if (_context.Marcas == null)
             {
                 return NotFound();
             }
-            return await _context.Marcas.ToListAsync();
+            
+            if (!string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(keyword))
+            {
+                var filter = $"%{keyword}%";
+                switch (column)
+                {
+                    case "nombre":
+                        marcas = _context.Marcas.Where(m => EF.Functions.Like(m.Nombre, filter)).ToList();
+                        break;
+                    case "id":
+                        if (int.TryParse(keyword, out var id))
+                        {
+                            marcas = _context.Marcas.Where(m => m.Id == id).ToList();
+                        }
+                        break;
+                    default:
+                        return BadRequest("Invalid column name");
+                }
+            }
+                
+            return marcas;
         }
 
         // GET: api/Marcas/5

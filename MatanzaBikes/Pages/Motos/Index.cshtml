@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Motos</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -13,6 +13,9 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                Marca
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Moto[0].Modelo)
             </th>
@@ -54,7 +57,13 @@
     </thead>
     <tbody>
 @foreach (var item in Model.Moto) {
-        <tr>
+            <tr>
+                <td>
+                    @{
+                        var m = Model.Marca.First(m => m.Id == 1);
+                    }
+                    @Html.DisplayFor(modelItem => m.Nombre)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Modelo)
             </td>

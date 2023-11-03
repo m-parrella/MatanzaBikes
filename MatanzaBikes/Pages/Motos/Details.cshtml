@@ -12,6 +12,15 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            Marca
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                var m = Model.Marca.First(m => m.Id == 1);
+            }
+            @Html.DisplayFor(model => m.Nombre)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Moto.Modelo)
         </dt>
         <dd class="col-sm-10">

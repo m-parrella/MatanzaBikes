@@ -63,6 +63,11 @@ namespace MatanzaBikes.Migrations
                     { 4, "Yamaha" }
                 });
 
+            migrationBuilder.InsertData(
+                table: "Motos",
+                columns: new[] { "Id", "Año", "Bateria", "Cilindrada", "Color", "Frenos", "ImagenUrl", "MarcaId", "Modelo", "Motor", "Peso", "Precio", "Rodado", "Suspension" },
+                values: new object[] { 1, 2023, "12", "650", "Verde", "Disco", "", 1, "KLT 650", "4 tiempos", 160, 11067000.0, 118.0, "Hidraulica" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Motos_MarcaId",
                 table: "Motos",

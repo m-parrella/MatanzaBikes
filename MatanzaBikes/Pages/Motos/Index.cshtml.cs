@@ -20,12 +20,17 @@ namespace MatanzaBikes.Pages.Motos
         }
 
         public IList<Moto> Moto { get;set; } = default!;
+        public IList<Marca> Marca { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
             if (_context.Motos != null)
             {
                 Moto = await _context.Motos.ToListAsync();
+            }
+            if (_context.Marcas != null)
+            {
+                Marca = await _context.Marcas.ToListAsync();
             }
         }
     }

@@ -6,7 +6,7 @@ Elegir un dominio de aplicación a fin de realizar una sistema cuya funcionalidad
 administración de una entidad importante de ese dominio. Es decir, básicamente se deberá
 realizar el ABM (alta, baja, modificación) de esa entidad.
 
-## Requerimientos funcionale
+## Requerimientos funcionales
 
 - Dar de alta elementos de esa entidad.
 - Actualizar elementos - campos de esa entidad.
