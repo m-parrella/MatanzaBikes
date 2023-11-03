@@ -15,30 +15,46 @@ namespace MatanzaBikes.Model
         [Key]
         public int Id { get; set; }
         /// <example>100</example>
+        [Required]
         public int MarcaId { get; set; }
         /// <example>KLT 650</example>
+        [Required]
         public string Modelo { get; set; } = null!;
         /// <example>650</example>
+        [Required]
         public string Cilindrada { get; set; } = null!;
         /// <example>Verde</example>
+        [Required]
         public string Color { get; set; } = null!;
         /// <example>2023</example>
+        [Required] 
         public int Año { get; set; }
         /// <example>4 tiempos</example>
+        [Required] 
         public string Motor { get; set; } = null!;
         /// <example>12</example>
+        [Required] 
         public string Bateria { get; set; } = null!;
         /// <example>160</example>
+        [Required] 
         public int Peso { get; set; }
         /// <example>118</example>
+        [Required] 
         public double Rodado { get; set; }
         /// <example>Hidraulica</example>
+        [Required] 
         public string Suspension { get; set; } = null!;
         /// <example>Disco</example>
+        [Required] 
         public string Frenos { get; set; } = null!;
-        /// <example></example>
-        public string ImagenUrl { get; set; } = null!;
+        /// <example>15</example>
+        [Required]
+        [Range(1, 1000)]
+        public int Stock { get; set; }
         /// <example>11067000</example>
-        public double Precio { get; set; }
+        [Required]
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Precio { get; set; }
     }
 }

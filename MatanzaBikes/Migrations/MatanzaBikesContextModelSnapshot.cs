@@ -87,10 +87,6 @@ namespace MatanzaBikes.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImagenUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("MarcaId")
                         .HasColumnType("int");
 
@@ -105,11 +101,14 @@ namespace MatanzaBikes.Migrations
                     b.Property<int>("Peso")
                         .HasColumnType("int");
 
-                    b.Property<double>("Precio")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<double>("Rodado")
                         .HasColumnType("float");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
 
                     b.Property<string>("Suspension")
                         .IsRequired()
@@ -130,13 +129,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            ImagenUrl = "",
                             MarcaId = 1,
                             Modelo = "KLT 650",
                             Motor = "4 tiempos",
                             Peso = 160,
-                            Precio = 11067000.0,
+                            Precio = 11067000m,
                             Rodado = 118.0,
+                            Stock = 5,
                             Suspension = "Hidraulica"
                         });
                 });

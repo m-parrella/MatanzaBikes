@@ -27,6 +27,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Obtiene un listado con todas las Motos."
         )]
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<Moto>>> GetMotos()
         {
             if (_context.Motos == null)
@@ -41,6 +44,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Obtiene el detalle de una Moto especìfica."
         )]
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Moto>> GetMoto(int id)
         {
             if (_context.Motos == null)
@@ -63,6 +69,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Actualiza el detalle de una Moto especìfica."
         )]
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> PutMoto(int id, Moto moto)
         {
             if (id != moto.Id)
@@ -97,6 +106,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Agrega una nueva Moto."
         )]
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Moto>> PostMoto(Moto moto)
         {
             if (_context.Motos == null)
@@ -114,6 +126,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Elimina una Moto especìfica."
         )]
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteMoto(int id)
         {
             if (_context.Motos == null)

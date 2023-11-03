@@ -67,6 +67,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Obtiene el detalle de una Marca especìfica."
         )]
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Marca>> GetMarca(int id)
         {
             if (_context.Marcas == null)
@@ -89,6 +92,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Actualiza el detalle de una Marca especìfica."
         )]
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> PutMarca(int id, Marca marca)
         {
             if (id != marca.Id)
@@ -123,6 +129,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Agrega una nueva Marca de Motos."
         )]
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Marca>> PostMarca(Marca marca)
         {
             if (_context.Marcas == null)
@@ -140,6 +149,9 @@ namespace MatanzaBikes.Controllers
             Summary = "Elimina una Marca especìfica."
         )]
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteMarca(int id)
         {
             if (_context.Marcas == null)

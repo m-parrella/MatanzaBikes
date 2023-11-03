@@ -61,8 +61,8 @@ namespace MatanzaBikes.Data
                 Rodado = 118,
                 Suspension = "Hidraulica",
                 Frenos = "Disco",
-                ImagenUrl = "",
-                Precio = 11067000
+                Stock = 5,
+                Precio = 11067000M
             });
 
         }

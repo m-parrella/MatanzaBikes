@@ -38,8 +38,8 @@ namespace MatanzaBikes.Migrations
                     Rodado = table.Column<double>(type: "float", nullable: false),
                     Suspension = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Frenos = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImagenUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Precio = table.Column<double>(type: "float", nullable: false)
+                    Stock = table.Column<int>(type: "int", nullable: false),
+                    Precio = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,8 +65,8 @@ namespace MatanzaBikes.Migrations
 
             migrationBuilder.InsertData(
                 table: "Motos",
-                columns: new[] { "Id", "Año", "Bateria", "Cilindrada", "Color", "Frenos", "ImagenUrl", "MarcaId", "Modelo", "Motor", "Peso", "Precio", "Rodado", "Suspension" },
-                values: new object[] { 1, 2023, "12", "650", "Verde", "Disco", "", 1, "KLT 650", "4 tiempos", 160, 11067000.0, 118.0, "Hidraulica" });
+                columns: new[] { "Id", "Año", "Bateria", "Cilindrada", "Color", "Frenos", "MarcaId", "Modelo", "Motor", "Peso", "Precio", "Rodado", "Stock", "Suspension" },
+                values: new object[] { 1, 2023, "12", "650", "Verde", "Disco", 1, "KLT 650", "4 tiempos", 160, 11067000m, 118.0, 5, "Hidraulica" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Motos_MarcaId",
