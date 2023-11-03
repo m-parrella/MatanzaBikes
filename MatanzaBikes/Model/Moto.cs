@@ -6,6 +6,7 @@ using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MatanzaBikes.Data;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace MatanzaBikes.Model
 {
@@ -13,6 +14,7 @@ namespace MatanzaBikes.Model
     {
         /// <example>100</example>
         [Key]
+        [SwaggerSchema(ReadOnly = true)]
         public int Id { get; set; }
         /// <example>100</example>
         [Required]

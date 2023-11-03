@@ -24,8 +24,8 @@ namespace MatanzaBikes.Controllers
 
         // GET: api/Motos
         /// <summary>Obtiene un listado con todas las Motos.</summary>
-        /// <param name="column" example="nombre"></param>
-        /// <param name="keyword" example="Honda"></param>
+        /// <param name="column" example="año"></param>
+        /// <param name="keyword" example="2023"></param>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

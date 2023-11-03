@@ -13,6 +13,7 @@ namespace MatanzaBikes.Model
     {
         /// <example>100</example>
         [Key]
+        [SwaggerSchema(ReadOnly = true)]
         public int Id { get; set; }
         /// <example>Kawasaki</example>
         public string Nombre { get; set; } = null!;
