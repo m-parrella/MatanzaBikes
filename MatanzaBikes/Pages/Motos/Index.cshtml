@@ -60,7 +60,7 @@
             <tr>
                 <td>
                     @{
-                        var m = Model.Marca.First(m => m.Id == 1);
+                        var m = Model.Marca.First(m => m.Id == item.MarcaId);
                     }
                     @Html.DisplayFor(modelItem => m.Nombre)
             </td>
