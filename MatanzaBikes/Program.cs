@@ -13,7 +13,7 @@ builder.Services.AddRazorPages();
 //    options.UseSqlServer("Data Source=LAPTOP-QA3T2VH6\\SQLEXPRESS;Initial Catalog=WebMotos;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
 
 builder.Services.AddDbContext<MatanzaBikesContext>(options =>
-    options.UseSqlServer("Data Source=LAPTOP-QA3T2VH6\\SQLEXPRESS;Initial Catalog=MatanzaBikes;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
+    options.UseSqlServer("Name=MatanzaBikes:ConnectionString"));
 
 
 // Swagger
