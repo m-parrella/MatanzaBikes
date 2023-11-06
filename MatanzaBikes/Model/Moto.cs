@@ -24,21 +24,25 @@ namespace MatanzaBikes.Model
         public string Modelo { get; set; } = null!;
         /// <example>650</example>
         [Required]
+        [Range(125, 2500)]
         public string Cilindrada { get; set; } = null!;
         /// <example>Verde</example>
         [Required]
         public string Color { get; set; } = null!;
         /// <example>2023</example>
-        [Required] 
+        [Required]
+        [Range(2000, 2023)]
         public int Año { get; set; }
         /// <example>4 tiempos</example>
         [Required] 
         public string Motor { get; set; } = null!;
         /// <example>12</example>
-        [Required] 
+        [Required]
+        [Range(7, 12)]
         public string Bateria { get; set; } = null!;
         /// <example>160</example>
-        [Required] 
+        [Required]
+        [Range(40, 300)]
         public int Peso { get; set; }
         /// <example>118</example>
         [Required] 
