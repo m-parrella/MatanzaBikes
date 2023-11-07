@@ -3,6 +3,7 @@ using MatanzaBikes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MatanzaBikes.Migrations
 {
     [DbContext(typeof(MatanzaBikesContext))]
-    partial class MatanzaBikesContextModelSnapshot : ModelSnapshot
+    [Migration("20231107015100_MatanzaBikes")]
+    partial class MatanzaBikes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using MatanzaBikes.Model;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using System.Drawing;
+using Faker;
 
 namespace MatanzaBikes.Data
 {
@@ -48,22 +49,30 @@ namespace MatanzaBikes.Data
                  );
             }
 
-            modelBuilder.Entity<Moto>().HasData(new Moto() {
-                Id = 1,
-                MarcaId = 1,
-                Modelo = "KLT 650",
-                Cilindrada = "650",
-                Color = "Verde",
-                Año = 2023,
-                Motor = "4 tiempos",
-                Bateria = "12",
-                Peso = 160,
-                Rodado = 118,
-                Suspension = "Hidraulica",
-                Frenos = "Disco",
-                Stock = 5,
-                Precio = 11067000M
-            });
+            List<Moto> motos = new List<Moto> { };
+
+            for (int i = 0; i < 10; i++)
+            {
+                Moto moto = new Moto()
+                {
+                    Id = i + 3,
+                    MarcaId = Faker.NumberFaker.Number(1, 4),
+                    Modelo = Faker.LocationFaker.Country(),
+                    Cilindrada = "650",
+                    Color = "Verde",
+                    Año = 2023,
+                    Motor = "4 tiempos",
+                    Bateria = "12",
+                    Peso = Faker.NumberFaker.Number(100, 400),
+                    Rodado = Faker.NumberFaker.Number(0, 400),
+                    Suspension = "Hidraulica",
+                    Frenos = "Disco",
+                    Stock = Faker.NumberFaker.Number(0, 1001),
+                    Precio = Faker.NumberFaker.Number(0, 400)
+                };
+                motos.Add(moto);
+            }
+            modelBuilder.Entity<Moto>().HasData(motos);
 
         }
 
