@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MatanzaBikes.Migrations
 {
     [DbContext(typeof(MatanzaBikesContext))]
-    [Migration("20231107015100_MatanzaBikes")]
+    [Migration("20231111012808_MatanzaBikes")]
     partial class MatanzaBikes
     {
         /// <inheritdoc />
@@ -132,13 +132,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 3,
-                            Modelo = "Mongolia",
+                            MarcaId = 1,
+                            Modelo = "New Zealand",
                             Motor = "4 tiempos",
-                            Peso = 197,
-                            Precio = 238m,
-                            Rodado = 207.0,
-                            Stock = 572,
+                            Peso = 216,
+                            Precio = 226m,
+                            Rodado = 239.0,
+                            Stock = 262,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -149,13 +149,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 2,
-                            Modelo = "Greece",
+                            MarcaId = 1,
+                            Modelo = "Egypt, Arab Rep.",
                             Motor = "4 tiempos",
-                            Peso = 112,
-                            Precio = 244m,
-                            Rodado = 271.0,
-                            Stock = 608,
+                            Peso = 363,
+                            Precio = 241m,
+                            Rodado = 311.0,
+                            Stock = 532,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -166,13 +166,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 3,
-                            Modelo = "Equatorial Guinea",
+                            MarcaId = 2,
+                            Modelo = "Suriname",
                             Motor = "4 tiempos",
-                            Peso = 360,
-                            Precio = 269m,
-                            Rodado = 367.0,
-                            Stock = 341,
+                            Peso = 376,
+                            Precio = 259m,
+                            Rodado = 218.0,
+                            Stock = 820,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -183,13 +183,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 1,
-                            Modelo = "Bermuda",
+                            MarcaId = 2,
+                            Modelo = "Yemen, Rep.",
                             Motor = "4 tiempos",
-                            Peso = 251,
-                            Precio = 236m,
-                            Rodado = 215.0,
-                            Stock = 843,
+                            Peso = 368,
+                            Precio = 183m,
+                            Rodado = 22.0,
+                            Stock = 786,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -200,13 +200,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 1,
-                            Modelo = "Belarus",
+                            MarcaId = 2,
+                            Modelo = "Zimbabwe",
                             Motor = "4 tiempos",
-                            Peso = 388,
-                            Precio = 267m,
-                            Rodado = 61.0,
-                            Stock = 701,
+                            Peso = 195,
+                            Precio = 45m,
+                            Rodado = 148.0,
+                            Stock = 636,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -218,12 +218,12 @@ namespace MatanzaBikes.Migrations
                             Color = "Verde",
                             Frenos = "Disco",
                             MarcaId = 1,
-                            Modelo = "Brazil",
+                            Modelo = "Azerbaijan",
                             Motor = "4 tiempos",
-                            Peso = 338,
-                            Precio = 126m,
-                            Rodado = 105.0,
-                            Stock = 33,
+                            Peso = 385,
+                            Precio = 140m,
+                            Rodado = 10.0,
+                            Stock = 319,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -235,12 +235,12 @@ namespace MatanzaBikes.Migrations
                             Color = "Verde",
                             Frenos = "Disco",
                             MarcaId = 3,
-                            Modelo = "Germany",
+                            Modelo = "India",
                             Motor = "4 tiempos",
-                            Peso = 273,
-                            Precio = 86m,
-                            Rodado = 34.0,
-                            Stock = 726,
+                            Peso = 275,
+                            Precio = 272m,
+                            Rodado = 385.0,
+                            Stock = 190,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -251,13 +251,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 3,
-                            Modelo = "Virgin Islands (U.S.)",
+                            MarcaId = 2,
+                            Modelo = "Eritrea",
                             Motor = "4 tiempos",
-                            Peso = 305,
-                            Precio = 19m,
-                            Rodado = 143.0,
-                            Stock = 386,
+                            Peso = 241,
+                            Precio = 187m,
+                            Rodado = 25.0,
+                            Stock = 645,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -269,12 +269,12 @@ namespace MatanzaBikes.Migrations
                             Color = "Verde",
                             Frenos = "Disco",
                             MarcaId = 1,
-                            Modelo = "Côte d'Ivoire",
+                            Modelo = "Korea, Dem. Rep.",
                             Motor = "4 tiempos",
-                            Peso = 361,
-                            Precio = 291m,
-                            Rodado = 5.0,
-                            Stock = 235,
+                            Peso = 246,
+                            Precio = 177m,
+                            Rodado = 290.0,
+                            Stock = 204,
                             Suspension = "Hidraulica"
                         },
                         new
@@ -285,13 +285,13 @@ namespace MatanzaBikes.Migrations
                             Cilindrada = "650",
                             Color = "Verde",
                             Frenos = "Disco",
-                            MarcaId = 2,
-                            Modelo = "Costa Rica",
+                            MarcaId = 3,
+                            Modelo = "Kiribati",
                             Motor = "4 tiempos",
-                            Peso = 294,
-                            Precio = 183m,
-                            Rodado = 53.0,
-                            Stock = 676,
+                            Peso = 272,
+                            Precio = 256m,
+                            Rodado = 184.0,
+                            Stock = 816,
                             Suspension = "Hidraulica"
                         });
                 });

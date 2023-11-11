@@ -72,16 +72,16 @@ namespace MatanzaBikes.Migrations
                 columns: new[] { "Id", "Año", "Bateria", "Cilindrada", "Color", "Frenos", "MarcaId", "Modelo", "Motor", "Peso", "Precio", "Rodado", "Stock", "Suspension" },
                 values: new object[,]
                 {
-                    { 3, 2023, "12", "650", "Verde", "Disco", 3, "Mongolia", "4 tiempos", 197, 238m, 207.0, 572, "Hidraulica" },
-                    { 4, 2023, "12", "650", "Verde", "Disco", 2, "Greece", "4 tiempos", 112, 244m, 271.0, 608, "Hidraulica" },
-                    { 5, 2023, "12", "650", "Verde", "Disco", 3, "Equatorial Guinea", "4 tiempos", 360, 269m, 367.0, 341, "Hidraulica" },
-                    { 6, 2023, "12", "650", "Verde", "Disco", 1, "Bermuda", "4 tiempos", 251, 236m, 215.0, 843, "Hidraulica" },
-                    { 7, 2023, "12", "650", "Verde", "Disco", 1, "Belarus", "4 tiempos", 388, 267m, 61.0, 701, "Hidraulica" },
-                    { 8, 2023, "12", "650", "Verde", "Disco", 1, "Brazil", "4 tiempos", 338, 126m, 105.0, 33, "Hidraulica" },
-                    { 9, 2023, "12", "650", "Verde", "Disco", 3, "Germany", "4 tiempos", 273, 86m, 34.0, 726, "Hidraulica" },
-                    { 10, 2023, "12", "650", "Verde", "Disco", 3, "Virgin Islands (U.S.)", "4 tiempos", 305, 19m, 143.0, 386, "Hidraulica" },
-                    { 11, 2023, "12", "650", "Verde", "Disco", 1, "Côte d'Ivoire", "4 tiempos", 361, 291m, 5.0, 235, "Hidraulica" },
-                    { 12, 2023, "12", "650", "Verde", "Disco", 2, "Costa Rica", "4 tiempos", 294, 183m, 53.0, 676, "Hidraulica" }
+                    { 3, 2023, "12", "650", "Verde", "Disco", 1, "New Zealand", "4 tiempos", 216, 226m, 239.0, 262, "Hidraulica" },
+                    { 4, 2023, "12", "650", "Verde", "Disco", 1, "Egypt, Arab Rep.", "4 tiempos", 363, 241m, 311.0, 532, "Hidraulica" },
+                    { 5, 2023, "12", "650", "Verde", "Disco", 2, "Suriname", "4 tiempos", 376, 259m, 218.0, 820, "Hidraulica" },
+                    { 6, 2023, "12", "650", "Verde", "Disco", 2, "Yemen, Rep.", "4 tiempos", 368, 183m, 22.0, 786, "Hidraulica" },
+                    { 7, 2023, "12", "650", "Verde", "Disco", 2, "Zimbabwe", "4 tiempos", 195, 45m, 148.0, 636, "Hidraulica" },
+                    { 8, 2023, "12", "650", "Verde", "Disco", 1, "Azerbaijan", "4 tiempos", 385, 140m, 10.0, 319, "Hidraulica" },
+                    { 9, 2023, "12", "650", "Verde", "Disco", 3, "India", "4 tiempos", 275, 272m, 385.0, 190, "Hidraulica" },
+                    { 10, 2023, "12", "650", "Verde", "Disco", 2, "Eritrea", "4 tiempos", 241, 187m, 25.0, 645, "Hidraulica" },
+                    { 11, 2023, "12", "650", "Verde", "Disco", 1, "Korea, Dem. Rep.", "4 tiempos", 246, 177m, 290.0, 204, "Hidraulica" },
+                    { 12, 2023, "12", "650", "Verde", "Disco", 3, "Kiribati", "4 tiempos", 272, 256m, 184.0, 816, "Hidraulica" }
                 });
 
             migrationBuilder.CreateIndex(
