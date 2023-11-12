@@ -35,12 +35,13 @@ namespace MatanzaBikes.Pages.Motos
                 if (!String.IsNullOrEmpty(searchString))
                 {
                     var filter = $"%{searchString}%";
-                    Moto = await _context.Motos.Where(m => 
+                    
+                    Moto = await _context.Motos.Where(m =>
                         EF.Functions.Like(m.Modelo, filter) ||
                         EF.Functions.Like(m.Cilindrada, filter)
                         ).ToListAsync();
                 }
-                
+
             }
             if (_context.Marcas != null)
             {
