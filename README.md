@@ -33,8 +33,3 @@ Agregar una entidad de relación a la entidad principal, y desarrollar el alta de
 - Readme con descripcion y diagramas.
 - Coleccion Postman con casos de uso.
 - Documentacion con Swagger/OpenAPI en caso de API.
-
-## Diagrama Entidad Relación
-
-![Alt text](Resources/MatanzaBikesDER.png?raw=true "DER")
-
