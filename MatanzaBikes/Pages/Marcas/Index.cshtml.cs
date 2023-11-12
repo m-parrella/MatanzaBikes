@@ -19,13 +19,23 @@ namespace MatanzaBikes.Pages.Marcas
             _context = context;
         }
 
+        public string CurrentFilter { get; set; }
         public IList<Marca> Marca { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
+            CurrentFilter = searchString;
+
             if (_context.Marcas != null)
             {
                 Marca = await _context.Marcas.ToListAsync();
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    var filter = $"%{searchString}%";
+                    Marca = await _context.Marcas.Where(m =>
+                        EF.Functions.Like(m.Nombre, filter)
+                        ).ToListAsync();
+                }
             }
         }
     }
